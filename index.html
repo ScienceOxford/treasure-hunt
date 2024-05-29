@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Micro:bit Treasure Hunt</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <header>
+      <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>CCC - Treasure Hunt</h1>
+  </header>
+
+  <div id="intro">
+    <p>Resources for the 'Treasure Hunt' Creative Computing Club.</p>
+    <p>During this workshop, you will program a BBC micro:bit to detect other micro:bits and show you how close or far away you are from it.</p>
+    <p>This page recaps what <a href="https://bit.ly/June24CCC" target="_blank">we discussed as a group</a>.</p>
+    <br>
+  </div>
+
+  <div id="starter" class="left">
+    <h3>Creating your first program</h3>
+    <p><a href="https://makecode.microbit.org/_TxDUMFggcWwq" target="_blank">Click here for the starter program</a> containing the functions you will need later in the workshop. Click Edit Code to open your own version of the program!</p>
+    <img src=".\images\makecode.PNG" alt="MakeCode editor window" width="800px" height="auto">
+    <p>Drag and drop code blocks (<em>click into the <strong>Basic</strong> menu</em>), to recreate this code:</p>
+    <img src=".\images\onstart-showstring.PNG" alt="on start, display string" width="400px" height="auto">
+    <p>You will see it running on the emulator on the left of your screen.</p>
+    <ul>
+      <li>What happens if you put the <strong>show</strong> block inside <strong>forever</strong> instead of <strong>on start</strong>?</li>
+      <li>What other <strong>show</strong> blocks can you find in the <strong>Basic</strong> menu?</li>
+    </ul>
+    <br>
+    <p>Follow the instructions to <a href="https://scienceoxford.github.io/do-your-bit/pair-microbit.html" target="_blank">pair your micro:bit</a>, then click <strong>Download</strong> to send your code to your physical micro:bit.</p>
+    <br>
+  </div>
+
+  <div id="communication" class="left">
+    <h3>Communicating with your treasure</h3>
+
+    <p><strong>Step 1</strong>: make sure your micro:bit only listens for one of the treasure boxes</p>
+    <ul>
+      <li>In the <strong>Radio</strong> menu</li>
+      <li>Choose: <strong>radio set group(1)</strong></li>
+      <li>Put this block into your <strong>on start</strong> event</li>
+      <li>Change the number to match your laptop's number.</li>
+    </ul>
+
+    <p><strong>Step 2</strong>: listen out for string (text) messages</p>
+    <ul>
+      <li>In the <strong>Radio</strong> menu</li>
+      <li>Choose: <strong>on radio received receivedString</strong></li>
+    </ul>
+
+    <p><strong>Step 3</strong>: do some background maths to work out the signal strength</p>
+    <ul>
+      <li>In the <strong>Advanced</strong> menu</li>
+      <li>In the <strong>Functions</strong> menu</li>
+      <li>Choose: <strong>call check-signal</strong></li>
+      <li>Put this block into your <strong>on radio received</strong> event</li>
+    </ul>
+
+    <p><strong>Step 4</strong>: prepare a bar graph</p>
+    <ul>
+      <li>In the <strong>Led</strong> menu</li>
+      <li>Choose: <strong>plot bar graph</strong></li>
+      <li>Put this block into your <strong>on radio received</strong> event</li>
+      <li>Change the <strong>up to</strong> number to <strong>9</strong></li>
+    </ul>
+
+    <p><strong>Step 5</strong>: plot a graph of the signal strength</p>
+    <ul>
+      <li>In the <strong>Variables</strong> menu</li>
+      <li>Choose: <strong>signal-strength</strong></li>
+      <li>Put this block into your <strong>plot bar graph</strong> block, so that it replaces the <strong>first number</strong></li>
+    </ul>
+
+    <br>
+    <p>Your final code should look like this:</p>
+    <img src=".\images\radio-code.PNG" alt="code as described above, with three events showing: function check-signal; on start; on radio received receivedString" width="800px" height="auto">
+
+    <br>
+    <p>Test our your code - does the graph change as you get nearer to the treasure boxes?</p>
+    <p>Try to find our own treasure box - when you think you have found it, check the micro:bit inside and make sure that it shows the number of your computer.</p>
+    <img src=".\images\..." alt="photograph of treasure box with a micro:bit inside" width="400px" height="auto">
+    <br>
+
+    <br>
+    <p>Do you want to know what message the micro:bit is sending to you?</p>
+    <p>Add a couple more blocks of code:</p>
+    <ul>
+      <li>In the <strong>Advanced</strong> menu</li>
+      <li>In the <strong>Serial</strong> menu</li>
+      <li>Choose: <strong>write line " "</strong></li>
+      <li>Put this block into your <strong>on radio received</strong> event</li>
+      <br>
+      <li>From the top of you <strong>on radio received</strong> event, click and drag <strong>receivedString</strong></li>
+      <li>Put this block into your <strong>write line " "</strong> block, so that it replaces the <strong>" "</strong></li>
+    </ul>
+    <p>After sending the new code to your micro:bit, click <strong>Show data Device</strong> under the Emulator.</p>
+    <img src=".\images\serial.PNG" alt="code as described above, with three events showing: function check-signal; on start; on radio received receivedString" width="800px" height="auto">
+    <br>
+    <br>
+  </div>
+
+  <div id="messages" class="left">
+    <h3>What now?</h3>
+    <p>You can choose what to do next. You could...</p>
+    <ul>
+      <li>keep coding your original micro:bit, for example to make it beep when you get close to the treasure.</li>
+      <li>change the code on the new micro:bit, for example to change the message it sends to you.</li>
+    </ul>
+    <p>Work on only one thing at once - having two micro:bits can get confusing!</p>
+    <br>
+  </div>
+
+  <nav class="links bg_green">
+    <h3>Original micro:bit ideas</h3>
+    <a href="original1.html" target="_blank">Beep when you get close to the treasure</a>
+    <a href="original2.html" target="_blank">Change the bar graph to different pictures</a>
+    <a href="original3.html" target="_blank">Advanced: increase volume as you get closer</a>
+    <br>
+    <br>
+  </nav>
+
+  <nav class="links bg_pink">
+    <h3>New micro:bit ideas</h3>
+    <a href="new1.html" target="_blank">Edit the sent message</a>
+    <a href="new2.html" target="_blank">Press a button to change the message</a>
+    <br>
+    <br>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/treasure-hunt" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
