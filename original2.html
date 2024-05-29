@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Micro:bit Treasure Hunt</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <header>
+      <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Replace the bar graph with pictures</h1>
+    <br>
+  </header>
+
+  <div id="logic" class="left">
+    <p>In the <strong>Logic</strong> menu, find the <strong>if true</strong> block.</p>
+    <p>Put it inside your <strong>on radio received</strong> event, at the end after all of the code you used before.</p>
+    <img src=".\images\logic-1.PNG" alt="TO ADD ALT TEXT" width="800px" height="auto">
+    <br>
+    <br>
+
+    <p>Also in the <strong>Logic</strong> menu, find the comparison block <strong>0 = 0</strong>.</p>
+    <p>Put it on the <strong>if true</strong> block, so that it replaces true.</p>
+    <img src=".\images\logic-2.PNG" alt="TO ADD ALT TEXT" width="800px" height="auto">
+    <br>
+    <br>
+
+    <p>Edit this new block, so that your statement reads: <strong>if signal-strength = 0</strong>.</p>
+    <img src=".\images\logic-3b.PNG" alt="TO ADD ALT TEXT" width="800px" height="auto">
+    <br>
+    <ul>
+      <li>signal-strength is in the <strong>Variables</strong> menu</li>
+      <li>= means <strong>is equal to</strong></li>
+      <li>0 is the lowest possible signal strength</li>
+    </ul>
+    <p>You can add something into the space inside the if block now. Whatever you add inside, will happen only if the signal strength is exactly 0.</p>
+    <br>
+    <br>
+
+    <p>To be able to test this code properly - <strong>delete the bar graph code</strong> you used earlier.</p>
+    <p>Right click on the purple block, and click 'delete blocks'.</p>
+    <br>
+    <br>
+
+    <p>Click the <strong>+</strong> button at the end of the <strong>if</strong> block twice, to expand the block.</p>
+    <p>Repeat the instructions above, to add a new set of instructions for if the signal strength is equal to 1.</p>
+    <img src=".\images\logic-4.PNG" alt="TO ADD ALT TEXT" width="800px" height="auto">
+    <br>
+    <p>You can now have three options:</p>
+    <ul>
+      <li>if the signal strength is 0</li>
+      <li>if the signal strength is 1</li>
+      <li>if the signal strength is anything else</li>
+    </ul>
+    <br>
+    <p>Once you have tested this code, you can keep going (keep pressing the <strong>+</strong> button!) to add instructions for each signal strength all the way up to 9.</p>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="index.html#extensions" target="_blank">Go back</a>
+    <br>
+    <br>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/treasure-hunt" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
